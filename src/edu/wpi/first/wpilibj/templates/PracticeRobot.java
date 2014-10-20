@@ -18,7 +18,10 @@ import edu.wpi.first.wpilibj.templates.autonomous.GoalieAuto;
 import edu.wpi.first.wpilibj.templates.autonomous.GoalieFlipped;
 import edu.wpi.first.wpilibj.templates.autonomous.GoalieStraight;
 import edu.wpi.first.wpilibj.templates.autonomous.OneBall;
+import edu.wpi.first.wpilibj.templates.autonomous.OneBallHot;
+import edu.wpi.first.wpilibj.templates.subsystems.Drivetrain;
 import edu.wpi.first.wpilibj.templates.Constants;
+import edu.wpi.first.wpilibj.templates.commands.DropGoalie;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -34,13 +37,15 @@ public class PracticeRobot extends IterativeRobot {
     
     int selectedAutonomous = 0;
     AutonomousWrapper autonomousOptions[] = {        
-        new AutonomousWrapper(Brick.class, "Do nothing", false),
-        new AutonomousWrapper(OneBall.class, "1B Any Goal", false),
+        new AutonomousWrapper(Brick.class, "Do nothing"),
+        new AutonomousWrapper(OneBall.class, "1B Any Goal"),
+        new AutonomousWrapper(OneBallHot.class, "1B Hot Goal (Set up on Right)", true, false),
+        new AutonomousWrapper(OneBallHot.class, "1B Hot Goal (Set up on Left)", true, true),
         
         // Goalie
-        new AutonomousWrapper(GoalieAuto.class, "GoalieDrive", false),
-        new AutonomousWrapper(GoalieFlipped.class, "GoalieFlipped", false),
-        new AutonomousWrapper(GoalieStraight.class, "GoalieStraight", false),
+        new AutonomousWrapper(GoalieAuto.class, "GoalieDrive"),
+        new AutonomousWrapper(GoalieFlipped.class, "GoalieFlipped"),
+        new AutonomousWrapper(GoalieStraight.class, "GoalieStraight"),
     };
     
     Command autonomousCommand = null;
@@ -73,6 +78,8 @@ public class PracticeRobot extends IterativeRobot {
         CommandBase.table.putBoolean("isTeleop", true);
         if ( autonomousCommand != null )
             autonomousCommand.cancel();
+        
+        new DropGoalie().start();
     }
     
     public void teleopPeriodic() 
@@ -81,7 +88,8 @@ public class PracticeRobot extends IterativeRobot {
     }
 
     public void testPeriodic() {
-        
+        //System.out.println(Integer.toString(Drivetrain.leftEncoder.get()) + 
+               // "; " + Integer.toString(Drivetrain.rightEncoder.get()));
     }
     
     public void disabledInit()
@@ -93,7 +101,7 @@ public class PracticeRobot extends IterativeRobot {
     }
     
     public void disabledPeriodic()
-    {
+    {   
         DriverStationLCD dsLCD = DriverStationLCD.getInstance();
 
         if ( OI.driver.getRawButton(2) && selectedAutonomous < autonomousOptions.length-1 )

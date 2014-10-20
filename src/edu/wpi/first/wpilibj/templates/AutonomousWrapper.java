@@ -11,10 +11,11 @@ public class AutonomousWrapper {
     Class autonomous = null;
     String description = "";
     boolean caresAboutHotGoal = false;
+    boolean startingOnLeft = true;
     public static boolean hasHotGoal = false;
     public static boolean leftIsHot = false;
-    public static boolean startingOnLeft = true;
-    public AutonomousWrapper(Class autonomous, String description, boolean caresAboutHotGoal)
+    
+    public AutonomousWrapper(Class autonomous, String description)
     {
         this.autonomous = autonomous;
         
@@ -23,7 +24,17 @@ public class AutonomousWrapper {
         else 
             this.description = description;
         
+        this.caresAboutHotGoal = false;       
+    }
+    
+    public AutonomousWrapper(Class autonomous, String description, boolean caresAboutHotGoal, boolean startingOnLeft)
+    {
+        this(autonomous, description);
+        
         this.caresAboutHotGoal = caresAboutHotGoal;
+        
+        if ( this.caresAboutHotGoal )
+            this.startingOnLeft = startingOnLeft;
     }
     
     public String getDescription()
@@ -37,12 +48,14 @@ public class AutonomousWrapper {
         {
            Timer t = new Timer();
            t.start();
-           while ( t.get() < 3.0 )
-           {
-               leftIsHot = CommandBase.table.getBoolean("leftHot", false);
-               if ( CommandBase.table.getBoolean("leftHot", false) || CommandBase.table.getBoolean("rightHot", false) )
-                   break;
-           }
+           
+           while ( t.get() < 1 ){}
+           
+           leftIsHot = CommandBase.table.getBoolean("leftHot", false);
+           if ( leftIsHot && startingOnLeft || !leftIsHot && !startingOnLeft ) // for clarity
+           {}
+           else if ( leftIsHot && !startingOnLeft || !leftIsHot && startingOnLeft )
+               while ( t.get() < 5){}          
         }
         Command command = null;
         try
