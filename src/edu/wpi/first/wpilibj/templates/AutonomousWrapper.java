@@ -11,9 +11,11 @@ public class AutonomousWrapper {
     Class autonomous = null;
     String description = "";
     boolean caresAboutHotGoal = false;
+    boolean leftIsHot = false;
+    boolean rightIsHot = false;
     boolean startingOnLeft = true;
     public static boolean hasHotGoal = false;
-    public static boolean leftIsHot = false;
+    public static boolean goalIsHot = false;
     
     public AutonomousWrapper(Class autonomous, String description)
     {
@@ -49,13 +51,19 @@ public class AutonomousWrapper {
            Timer t = new Timer();
            t.start();
            
-           while ( t.get() < 1 ){}
-           
-           leftIsHot = CommandBase.table.getBoolean("leftHot", false);
-           if ( leftIsHot && startingOnLeft || !leftIsHot && !startingOnLeft ) // for clarity
-           {}
-           else if ( leftIsHot && !startingOnLeft || !leftIsHot && startingOnLeft )
-               while ( t.get() < 5){}          
+           while ( t.get() < 3.0 )
+           {
+               leftIsHot = CommandBase.table.getBoolean("leftHot", false);
+               rightIsHot = CommandBase.table.getBoolean("rightHot", false);
+               if ( leftIsHot || rightIsHot )
+               {
+                    if ( leftIsHot && startingOnLeft || !leftIsHot && !startingOnLeft )
+                        goalIsHot = true;
+                    else if ( leftIsHot && !startingOnLeft || !leftIsHot && startingOnLeft )
+                        goalIsHot = false;
+                    break;
+               }
+           }         
         }
         Command command = null;
         try
