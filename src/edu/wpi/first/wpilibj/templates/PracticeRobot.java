@@ -39,8 +39,8 @@ public class PracticeRobot extends IterativeRobot {
     AutonomousWrapper autonomousOptions[] = {        
         new AutonomousWrapper(Brick.class, "Do nothing"),
         new AutonomousWrapper(OneBall.class, "1B Any Goal"),
-        new AutonomousWrapper(OneBallHot.class, "1B Hot Goal (Set up on Right)", true, false),
-        new AutonomousWrapper(OneBallHot.class, "1B Hot Goal (Set up on Left)", true, true),
+        new AutonomousWrapper(OneBallHot.class, "1B Hot Goal (Right)", true, false),
+        new AutonomousWrapper(OneBallHot.class, "1B Hot Goal (Left)", true, true),
         
         // Goalie
         new AutonomousWrapper(GoalieAuto.class, "GoalieDrive"),
@@ -87,9 +87,9 @@ public class PracticeRobot extends IterativeRobot {
         Scheduler.getInstance().run();
     }
 
-    public void testPeriodic() {
-        //System.out.println(Integer.toString(Drivetrain.leftEncoder.get()) + 
-               // "; " + Integer.toString(Drivetrain.rightEncoder.get()));
+    public void testPeriodic() 
+    {
+        System.out.println("" + CommandBase.drivetrain.getLeftDistance() + ", " + CommandBase.drivetrain.getRightDistance());
     }
     
     public void disabledInit()

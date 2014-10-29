@@ -53,8 +53,8 @@ public class AutonomousWrapper {
            
            while ( t.get() < 3.0 )
            {
-               leftIsHot = CommandBase.table.getBoolean("leftHot", false);
-               rightIsHot = CommandBase.table.getBoolean("rightHot", false);
+               leftIsHot = !CommandBase.table.getBoolean("leftHot", false);
+               rightIsHot = !CommandBase.table.getBoolean("rightHot", false);
                if ( leftIsHot || rightIsHot )
                {
                     if ( leftIsHot && startingOnLeft || !leftIsHot && !startingOnLeft )

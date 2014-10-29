@@ -69,7 +69,7 @@ public class GoalieAuto extends CommandBase {
 
     protected void execute() {
         intake.setRoller(1);
-        drivetrain.shift(true);
+        drivetrain.shift(false);
         boolean left = CommandBase.table.getBoolean("leftHot");
         boolean right = CommandBase.table.getBoolean("rightHot");
         double angle;

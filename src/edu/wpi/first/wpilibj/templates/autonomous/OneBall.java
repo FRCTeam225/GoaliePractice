@@ -14,7 +14,7 @@ public class OneBall extends CommandGroup {
     public OneBall()
     {
         addSequential(new Stow());
-        addSequential(new DriveDistance(10000));
+        addSequential(new DriveDistance(-10000));
         addSequential(new Spit());
         addSequential(new WaitCommand(2.0));
     }

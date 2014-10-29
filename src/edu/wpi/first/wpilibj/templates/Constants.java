@@ -37,7 +37,7 @@ public class Constants extends DoubleTable {
         put("HOLDPOSITION_P", 0.004);
         put("HOLDPOSITION_TURN_P", 0.05);
         
-        put("GOALIE_SPEED", 0.4);
+        put("GOALIE_SPEED", 0.75);
         
         put("GOALIE_PEEK_POS", -8000);
         put("GOALIE_PEEK_ANGLE", -15);

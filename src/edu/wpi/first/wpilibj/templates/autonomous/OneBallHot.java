@@ -17,7 +17,7 @@ public class OneBallHot extends CommandGroup {
         if ( !AutonomousWrapper.goalIsHot )
             addSequential(new WaitCommand(4.0));
         addSequential(new Stow());
-        addSequential(new DriveDistance(-45000));
+        addSequential(new DriveDistance(-3000));
         addSequential(new Spit());
         addSequential(new WaitCommand(2.0));
     }

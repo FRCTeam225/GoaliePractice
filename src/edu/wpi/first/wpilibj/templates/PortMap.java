@@ -16,14 +16,14 @@ public class PortMap {
     public static final int LEFT_DRIVE1 = 4;
     public static final int LEFT_DRIVE2 = 5;
     public static final int LEFT_DRIVE3 = 6;
-    public static final int LEFT_ENCODERA = 4; // Digital
-    public static final int LEFT_ENCODERB = 5; // Digital
+    public static final int LEFT_ENCODERA = 8; // Digital
+    public static final int LEFT_ENCODERB = 9; // Digital
     
     public static final int RIGHT_DRIVE1 = 1;
     public static final int RIGHT_DRIVE2 = 2;
     public static final int RIGHT_DRIVE3 = 3;
-    public static final int RIGHT_ENCODERA = 7; // Digital
-    public static final int RIGHT_ENCODERB = 8; // Digital
+    public static final int RIGHT_ENCODERA = 5; // Digital
+    public static final int RIGHT_ENCODERB = 6; // Digital
     
     //Other Sensors
     public static final int GYRO = 1; // Analog
