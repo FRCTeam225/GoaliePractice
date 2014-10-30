@@ -3,31 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/OI.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/commands/DropGoalie.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/PortMap.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/PracticeRobot.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/SimplePID.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/commands/Spit.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/subsystems/Intake.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/subsystems/Drivetrain.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/CommandBase.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/subsystems/Goalie.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/commands/ReturnGoalie.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/autonomous/GoalieAuto.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/commands/CheesyDrive.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/commands/Stow.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/commands/DriveDistance.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/autonomous/OnlyDriveForward.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/commands/SimplePIDCommand.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/Constants.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/ConstantServer.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/DoubleTable.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/autonomous/OneBall.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/autonomous/GoalieFlipped.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/AutonomousWrapper.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/autonomous/Brick.java</file>
-            <file>file:/C:/Users/Driver2/Desktop/PracticeRobot/PracticeRobot_Modified/src/edu/wpi/first/wpilibj/templates/DumpAutonomous.java</file>
+            <file>file:/C:/Users/Driver2/Documents/NetBeansProjects/PR/src/edu/wpi/first/wpilibj/templates/Constants.java</file>
+            <file>file:/C:/Users/Driver2/Documents/NetBeansProjects/PR/src/edu/wpi/first/wpilibj/templates/autonomous/OneBallHot.java</file>
+            <file>file:/C:/Users/Driver2/Documents/NetBeansProjects/PR/src/edu/wpi/first/wpilibj/templates/PracticeRobot.java</file>
+            <file>file:/C:/Users/Driver2/Documents/NetBeansProjects/PR/src/edu/wpi/first/wpilibj/templates/autonomous/OneBall.java</file>
         </group>
     </open-files>
 </project-private>

@@ -16,9 +16,9 @@ public class Constants extends DoubleTable {
     public static Constants constants = null;
     public Constants()
     {
-        put("DRIVETRAIN_P", 0.0008);
+        put("DRIVETRAIN_P", 0.0007);
         put("DRIVETRAIN_I", 0.0000);
-        put("DRIVETRAIN_D", 0.007);
+        put("DRIVETRAIN_D", 0.005);
         
         put("DRIVETRAIN_DRIVESTRAIGHT_P", -0.065);
         
